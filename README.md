@@ -1,5 +1,5 @@
-[link](https://trapagasarah.github.io/Into-the-Woods/)
-[link](https://trello.com/b/8TCgd58Q/into-the-woods-jeopardy)
+[Deployment Link](https://trapagasarah.github.io/Into-the-Woods/)
+[Project Board](https://trello.com/b/8TCgd58Q/into-the-woods-jeopardy)
 
 ## Welcome to GitHub Pages
 
