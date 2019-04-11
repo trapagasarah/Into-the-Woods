@@ -1,0 +1,19 @@
+.game-container{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.category-square{
+    display: flex;
+    border: 1px solid purple;
+    width: 4em;
+    height: 4em;
+    font-size: 2em;
+    margin: 0;
+}
