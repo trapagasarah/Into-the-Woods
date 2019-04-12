@@ -201,6 +201,7 @@ let drawCategories = function () {
 
     for (let i = 0; i < categories.length; i++) {
         let categorySquare = $('<div></div>')
+        categorySquare.addClass('game-square')
         categorySquare.addClass('category-square')
         categorySquare.html(categories[i])
         row.append(categorySquare)
@@ -209,10 +210,9 @@ let drawCategories = function () {
 
 let drawBoard = function() {
     for (let i = 0; i < 5; i++) {
-        let row2 = $('<div></div>')
-        row2.addClass('row2')
-        $('main').append(row2)
-        
+        let row = $('<div></div>')
+        row.addClass('row')
+        $('main').append(row)
             let deerSquare = $("<div></div>")
             deerSquare.addClass('game-square')
             deerSquare.html(ohDeer[i].value)
@@ -231,16 +231,38 @@ let drawBoard = function() {
             let hareSquare = $('<div></div>')
             hareSquare.addClass('game-square')
             hareSquare.html(itsGettingHarey[i].value)
-            row2.append(deerSquare)
-            row2.append(bearSquare)
-            row2.append(hedgehogSquare)
-            row2.append(foxSquare)
-            row2.append(squirrelSquare)
-            row2.append(hareSquare)
+            row.append(deerSquare)
+            row.append(bearSquare)
+            row.append(hedgehogSquare)
+            row.append(foxSquare)
+            row.append(squirrelSquare)
+            row.append(hareSquare)
+            deerSquare.click(function () {
+                selectQuestion()
+            })
+            bearSquare.click(function () {
+                selectQuestion()
+            })
+            foxSquare.click(function () {
+                selectQuestion()
+            })
+            hedgehogSquare.click(function () {
+                selectQuestion()
+            })
+            squirrelSquare.click(function () {
+                selectQuestion()
+            })
+            hareSquare.click(function () {
+                selectQuestion()
+            })
         }
-        
+       
     }
 
+
+let selectQuestion = function(){
+    console.log('clicked')
+}
 
 $(function () {
     drawCategories()
