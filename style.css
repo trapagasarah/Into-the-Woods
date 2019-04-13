@@ -2,6 +2,7 @@ body {
     background-image: url(deer.jpg);
     background-size: cover;
     width: 100vw;
+    min-height:60em; 
     font-family: 'Raleway', sans-serif;
     margin: 0 auto;
     display: flex;
@@ -19,13 +20,20 @@ h1 {
     margin-bottom: 0;
     font-weight:900;
 }
+h2{
+    font-size: 1.5em;
+    margin: 0;
+}
+p{
+    margin: .2em 0;
+}
+#correct-incorrect-modal > p, #final-jeopardy-modal > p {
+    font-size: .75em;
+}
 .game-container{
     display: flex;
     flex-direction: column;
-    margin-left: 2em;
-    
-    
-    
+    margin-left: 2em; 
 }
 
 .row{
@@ -64,19 +72,19 @@ h1 {
 }
 .modal{
     display: none;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     color: white;
     background-color: rgba(101, 126,107,1);
-    width: 40%;
-    height: 35%;
+    width: 28%;
     font-size: 2em;
-    top: 8.35em;
-    left: 4.6em;
+    top: 12em;
+    left: 6.5em;
     border-radius: .5em;
     text-align: center;
-    padding: .5em 0;  
+    padding: .75em;  
 }
+
 .score{
     display: flex;
     width: 6em;
@@ -88,5 +96,14 @@ h1 {
     margin: 13em 4em 13em 8em;
     align-items: center;
     border-radius: .5em;
+}
+input{
+    font-size: .5em;
+    border-radius: .4em;
+    text-align: center;
+}
+button{
+    font-size: .5em;
+    border-radius: .4em;
 }
 

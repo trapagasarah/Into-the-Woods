@@ -1,5 +1,8 @@
 let score = 0
 let attemptedAnswer
+let numberTurns = 0
+let finalJeopardyQuestion = 'The word the owl in Bambi uses to describe falling in love.'
+let finalJeopardyAnswer = 'What is Twitterpatted'
 const categories = ['Oh Deer', 'Bear With Me', 'Hedge the Hog', 'Hey Foxy', 'Get Squirrely', 'Its Getting Harey']
 
 const ohDeer = [
@@ -29,8 +32,8 @@ const ohDeer = [
     },
     {
         value: 500,
-        answer: "The mom of Bambi's love interest",
-        question: 'Who is Ena?',
+        answer: 'Who is Ena',
+        question: "The mom of Bambi's love interest",
         hasBeenSelected: false,
     },
 ]
@@ -247,7 +250,7 @@ let drawBoard = function () {
             }
             checkIfAnswerIsCorret(ohDeer[i])
             deerSquare.html('')
-            deerSquare.css('background','rgba(175,113,80, .5)')
+            deerSquare.css('background', 'rgba(175,113,80, .5)')
         })
         bearSquare.click(function () {
             selectQuestion(bearWithMe[i])
@@ -256,7 +259,7 @@ let drawBoard = function () {
             }
             checkIfAnswerIsCorret(bearWithMe[i])
             bearSquare.html('')
-            bearSquare.css('background','rgba(175,113,80, .5)')
+            bearSquare.css('background', 'rgba(175,113,80, .5)')
         })
         foxSquare.click(function () {
             selectQuestion(heyFoxy[i])
@@ -265,7 +268,7 @@ let drawBoard = function () {
             }
             checkIfAnswerIsCorret(heyFoxy[i])
             foxSquare.html('')
-            foxSquare.css('background','rgba(175,113,80, .5)')
+            foxSquare.css('background', 'rgba(175,113,80, .5)')
         })
         hedgehogSquare.click(function () {
             selectQuestion(hedgeTheHog[i])
@@ -274,7 +277,7 @@ let drawBoard = function () {
             }
             checkIfAnswerIsCorret(hedgeTheHog[i])
             hedgehogSquare.html('')
-            hedgehogSquare.css('background','rgba(175,113,80, .5)')
+            hedgehogSquare.css('background', 'rgba(175,113,80, .5)')
         })
         squirrelSquare.click(function () {
             selectQuestion(getSquirrely[i])
@@ -283,7 +286,7 @@ let drawBoard = function () {
             }
             checkIfAnswerIsCorret(getSquirrely[i])
             squirrelSquare.html('')
-            squirrelSquare.css('background','rgba(175,113,80, .5)')
+            squirrelSquare.css('background', 'rgba(175,113,80, .5)')
         })
         hareSquare.click(function () {
             selectQuestion(itsGettingHarey[i])
@@ -292,7 +295,7 @@ let drawBoard = function () {
             }
             checkIfAnswerIsCorret(itsGettingHarey[i])
             hareSquare.html('')
-            hareSquare.css('background','rgba(175,113,80, .5)')
+            hareSquare.css('background', 'rgba(175,113,80, .5)')
         })
     }
 
@@ -302,37 +305,71 @@ let selectQuestion = function (animalSquare) {
     $('#question-modal p').html(animalSquare.question)
     $('#question-modal').show()
     animalSquare.hasBeenSelected = true
+
 }
 
 let checkIfAnswerIsCorret = function (animalSquare) {
-    $('.submit').click(function () {
+    $('.submit').click(function (event) {
+        event.preventDefault()
         let attemptedAnswer = $('.attempted-answer').val()
             .toLowerCase()
             .replace(/(~|`|!|@|#|$|%|^|&|\*|\(|\)|{|}|\[|\]|;|:|\"|'|<|,|\.|>|\?|\/|\\|\||-|_|\+|=)/g, "")
         if (attemptedAnswer === animalSquare.answer.toLowerCase()) {
             score += animalSquare.value
             $('#correct-incorrect-modal h2').html('Correct!')
-            $('#correct-incorrect-modal').show()
+            $('#correct-incorrect-modal p').html('')
         } else {
             score -= animalSquare.value
             $('#correct-incorrect-modal h2').html('Incorrect')
-            $('#correct-incorrect-modal').show()
+            $('#correct-incorrect-modal p').html('We were looking for... ' + animalSquare.answer + '?')
         }
+        $('#correct-incorrect-modal').show()
         $('.submit').off()
         $('#question-modal').hide()
         $('.score').html('Score: ' + score)
         $('.attempted-answer').val('')
+        numberTurns++
+
+
     })
-    
+
 }
 
 
 $(function () {
     drawCategories()
     drawBoard()
-    $('.close').click(function(){
+    $('.close').click(function () {
         $('#correct-incorrect-modal').hide()
+        if (numberTurns === 30 && score > 0) {
+            $('#final-jeopardy-bet-modal').show()
+        }else if(numberTurns === 30){
+        $('main').html('')
+    }
     })
+    $('.bet-submit').click(function (event) {
+        event.preventDefault()
+        let bet = $('.bet').val()
+        $('#final-jeopardy-question-modal').show()
+        $('#final-jeopardy-question-modal p').html(finalJeopardyQuestion)
+        $('.answer-submit').click(function (event) {
+            event.preventDefault()
+            let submittedAnswer = $('.answer').val()
+                .toLowerCase()
+                .replace(/(~|`|!|@|#|$|%|^|&|\*|\(|\)|{|}|\[|\]|;|:|\"|'|<|,|\.|>|\?|\/|\\|\||-|_|\+|=)/g, "")
+                console.log(submittedAnswer)
+            if (submittedAnswer === finalJeopardyAnswer.toLowerCase()) {
+                score += Number(bet)
+            } else {
+                score -= Number(bet)
+            }
+            $('.modal').hide()
+            $('.score').html('Score: ' + score)
+            $('main').html('')
+            
+        })
 
+
+
+    })
 })
-
