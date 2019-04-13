@@ -246,6 +246,8 @@ let drawBoard = function () {
                 deerSquare.off('click')
             }
             checkIfAnswerIsCorret(ohDeer[i])
+            deerSquare.html('')
+            deerSquare.css('background','rgba(175,113,80, .5)')
         })
         bearSquare.click(function () {
             selectQuestion(bearWithMe[i])
@@ -253,7 +255,8 @@ let drawBoard = function () {
                 bearSquare.off('click')
             }
             checkIfAnswerIsCorret(bearWithMe[i])
-
+            bearSquare.html('')
+            bearSquare.css('background','rgba(175,113,80, .5)')
         })
         foxSquare.click(function () {
             selectQuestion(heyFoxy[i])
@@ -261,6 +264,8 @@ let drawBoard = function () {
                 foxSquare.off('click')
             }
             checkIfAnswerIsCorret(heyFoxy[i])
+            foxSquare.html('')
+            foxSquare.css('background','rgba(175,113,80, .5)')
         })
         hedgehogSquare.click(function () {
             selectQuestion(hedgeTheHog[i])
@@ -268,6 +273,8 @@ let drawBoard = function () {
                 hedgehogSquare.off('click')
             }
             checkIfAnswerIsCorret(hedgeTheHog[i])
+            hedgehogSquare.html('')
+            hedgehogSquare.css('background','rgba(175,113,80, .5)')
         })
         squirrelSquare.click(function () {
             selectQuestion(getSquirrely[i])
@@ -275,6 +282,8 @@ let drawBoard = function () {
                 squirrelSquare.off('click')
             }
             checkIfAnswerIsCorret(getSquirrely[i])
+            squirrelSquare.html('')
+            squirrelSquare.css('background','rgba(175,113,80, .5)')
         })
         hareSquare.click(function () {
             selectQuestion(itsGettingHarey[i])
@@ -282,46 +291,48 @@ let drawBoard = function () {
                 hareSquare.off('click')
             }
             checkIfAnswerIsCorret(itsGettingHarey[i])
+            hareSquare.html('')
+            hareSquare.css('background','rgba(175,113,80, .5)')
         })
     }
 
 }
 
 let selectQuestion = function (animalSquare) {
-    $('.modal  p').html(animalSquare.question)
-    $('.modal').show()
+    $('#question-modal p').html(animalSquare.question)
+    $('#question-modal').show()
     animalSquare.hasBeenSelected = true
 }
 
 let checkIfAnswerIsCorret = function (animalSquare) {
-    $('button').click(function () {
+    $('.submit').click(function () {
         let attemptedAnswer = $('.attempted-answer').val()
             .toLowerCase()
-            .replace(/(~|`|!|@|#|$|%|^|&|\*|\(|\)|{|}|\[|\]|;|:|\"|'|<|,|\.|>|\?|\/|\\|\||-|_|\+|=)/g,"")
-
-            
-
-
-
-        
-        if (attemptedAnswer === animalSquare.answer.toLowerCase()){
+            .replace(/(~|`|!|@|#|$|%|^|&|\*|\(|\)|{|}|\[|\]|;|:|\"|'|<|,|\.|>|\?|\/|\\|\||-|_|\+|=)/g, "")
+        if (attemptedAnswer === animalSquare.answer.toLowerCase()) {
             score += animalSquare.value
-            console.log(score)
+            $('#correct-incorrect-modal h2').html('Correct!')
+            $('#correct-incorrect-modal').show()
         } else {
             score -= animalSquare.value
-            console.log(score)
+            $('#correct-incorrect-modal h2').html('Incorrect')
+            $('#correct-incorrect-modal').show()
         }
-        $('button').off()
-        $('.modal').hide()
+        $('.submit').off()
+        $('#question-modal').hide()
+        $('.score').html('Score: ' + score)
+        $('.attempted-answer').val('')
     })
-
+    
 }
 
 
 $(function () {
     drawCategories()
     drawBoard()
-    
+    $('.close').click(function(){
+        $('#correct-incorrect-modal').hide()
+    })
 
 })
 

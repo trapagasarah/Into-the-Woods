@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,16 +11,22 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-   
-   <main class="game-container">
+
+    <main class="game-container">
         <h1>Into The Woods Jeopardy</h1>
-        <div class="score"></div>
-   </main> 
-   <div class="modal">
-       <p></p>
-       <input class="attempted-answer" type="text" placeholder="Your Answer Here">
-       <button>Submit</button>
-   </div>
+    </main>
+    <div class="score">Score: 0</div>
+    <div class="modal" id="question-modal">
+        <p></p>
+        <input class="attempted-answer" type="text" placeholder="Your Answer Here">
+        <button class="submit">Submit</button>
+    </div>
+    <div class="modal" id="correct-incorrect-modal">
+        <h2></h2>
+        <button class="close">Close</button>
+    </div>
 </body>
+
 </html>
