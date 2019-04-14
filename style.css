@@ -10,8 +10,8 @@ body {
     justify-content: space-between
 }
 main{
-    margin-top: 6em;
-    margin-bottom: 8em;
+    margin-top: 3em;
+    margin-bottom: 11em;
 }
 h1 {
     color: white;
@@ -46,6 +46,7 @@ p{
 }
 .game-square:hover{
     background-color: rgba(175,113,80, .5);
+    color: white;
 }
 .category-square:hover{
     background-color: rgba(140, 168, 147, .8);
@@ -106,4 +107,15 @@ button{
     font-size: .5em;
     border-radius: .4em;
 }
-
+#final-jeopardy-bet-modal, #final-jeopardy-question-modal{
+    background: rgb(255,255,255);
+    color:  rgba(101, 126,107,1);
+}
+.bet, .answer{
+    background-color: rgba(140, 168, 147, .8);
+    color: white; 
+}
+button{
+    background-color: rgba(175,113,80, .8);
+    color: white;
+}
