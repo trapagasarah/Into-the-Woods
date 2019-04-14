@@ -8,8 +8,8 @@ const categories = ['Oh Deer', 'Bear With Me', 'Hedge the Hog', 'Hey Foxy', 'Get
 const ohDeer = [
     {
         value: 100,
-        answer: 'Who is Rudolph',
-        question: "The leader of Santa's sley, who has a red nose.",
+        answer: 'What is a herd',
+        question: "A group of deer.",
         hasBeenSelected: false,
     },
     {
@@ -32,8 +32,8 @@ const ohDeer = [
     },
     {
         value: 500,
-        answer: 'Who is Ena',
-        question: "The mom of Bambi's love interest",
+        answer: 'What is a Kashmir musk deer',
+        question: "The species of deer with vampire-like fangs",
         hasBeenSelected: false,
     },
 ]
@@ -58,14 +58,14 @@ const bearWithMe = [
     },
     {
         value: 400,
-        answer: 'Who is Paddington',
-        question: 'The bear whose home is destroyed by an eathquake and searches for a new one in England.',
+        answer: 'What is a slowth',
+        question: 'A group of bears.',
         hasBeenSelected: false,
     },
     {
         value: 500,
-        answer: "Who is Mor'du",
-        question: 'The name of the main antagoist in the movie Brave.',
+        answer: "What is pepper vodka",
+        question: 'The beverage the governor of Moscow taught a bear to serve.',
         hasBeenSelected: false,
     },
 ]
@@ -78,13 +78,13 @@ const hedgeTheHog = [
     },
     {
         value: 200,
-        answer: 'What is array',
+        answer: 'What is an array',
         question: 'The nanme of a group of hedgehogs?',
         hasBeenSelected: false,
     },
     {
         value: 300,
-        answer: 'What is sea urchin',
+        answer: 'What is a sea urchin',
         question: 'The animal named after the hedgehog.',
         hasBeenSelected: false,
     },
@@ -104,96 +104,96 @@ const hedgeTheHog = [
 const heyFoxy = [
     {
         value: 100,
-        answer: '.....',
-        question: '-----',
+        answer: 'What is a red fox',
+        question: 'The most common fox species.',
         hasBeenSelected: false,
     },
     {
         value: 200,
-        answer: '.....',
-        question: '-----',
+        answer: 'what is a vixen',
+        question: 'A female fox',
         hasBeenSelected: false,
     },
     {
         value: 300,
-        answer: '.....',
-        question: '-----',
+        answer: 'What is a kit',
+        question: 'A baby fox',
         hasBeenSelected: false,
     },
     {
         value: 400,
-        answer: '.....',
-        question: '-----',
+        answer: 'Who is Tod',
+        question: 'The name of the fox in The Fox and the Hound.',
         hasBeenSelected: false,
     },
     {
         value: 500,
-        answer: '.....',
-        question: '-----',
+        answer: 'What is a skulk',
+        question: 'A group of foxes.',
         hasBeenSelected: false,
-    },
+    }
 ]
 const getSquirrely = [
     {
         value: 100,
-        answer: '.....',
-        question: '-----',
+        answer: 'What is a dray',
+        question: 'A family of squirrels.',
         hasBeenSelected: false,
     },
     {
         value: 200,
-        answer: '.....',
-        question: '-----',
+        answer: 'What is a scurry',
+        question: 'A group of squirrels.',
         hasBeenSelected: false,
     },
     {
         value: 300,
-        answer: '.....',
-        question: '-----',
+        answer: 'What are front teeth',
+        question: 'The part of a squirrel that never stops growing.',
         hasBeenSelected: false,
     },
     {
         value: 400,
-        answer: '.....',
-        question: '-----',
+        answer: 'What is Iran',
+        question: 'The country that claimed 14 squirrels found near its boarder were spies.',
         hasBeenSelected: false,
     },
     {
         value: 500,
-        answer: '.....',
-        question: '-----',
+        answer: 'What is shadow tail',
+        question: 'The meaning of squirrel in Greek',
         hasBeenSelected: false,
     },
 ]
 const itsGettingHarey = [
     {
         value: 100,
-        answer: '.....',
-        question: '-----',
+        answer: 'Who is Thumper',
+        question: "Bambi's best friend",
         hasBeenSelected: false,
     },
     {
         value: 200,
-        answer: '.....',
-        question: '-----',
+        answer: 'What is a Jack',
+        question: 'A male hare.',
         hasBeenSelected: false,
     },
     {
         value: 300,
-        answer: '.....',
-        question: '-----',
+        answer: 'What is a Jill',
+        question: 'A female hare.',
         hasBeenSelected: false,
     },
     {
         value: 400,
-        answer: '.....',
-        question: '-----',
+        answer: 'What is a drove',
+        question: 'A group of hares.',
         hasBeenSelected: false,
     },
     {
         value: 500,
-        answer: '.....',
-        question: '-----',
+        answer: 'What is a leveret',
+        question: 'A baby hare',
         hasBeenSelected: false,
     },
 ]

@@ -17,7 +17,7 @@ h1 {
     color: white;
     font-size: 4.5em;
     width: 12em;
-    margin-bottom: 0;
+    margin-bottom: .2em;
     font-weight:900;
 }
 h2{
@@ -45,7 +45,7 @@ p{
     
 }
 .game-square:hover{
-    background-color: rgba(175,113,80, .5);
+    background-color: rgba(119, 77, 55, 0.8);
     color: white;
 }
 .category-square:hover{
