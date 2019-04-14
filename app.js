@@ -32,8 +32,8 @@ const ohDeer = [
     },
     {
         value: 500,
-        answer: 'What is a Kashmir musk deer',
-        question: "The species of deer with vampire-like fangs",
+        answer: 'What are Kashmir musk deer',
+        question: "The species of deer with vampire-like fangs.",
         hasBeenSelected: false,
     },
 ]
@@ -73,13 +73,13 @@ const hedgeTheHog = [
     {
         value: 100,
         answer: 'What are hoglets',
-        question: 'What baby hedgehoogs are called',
+        question: 'What baby hedgehogs are called.',
         hasBeenSelected: false,
     },
     {
         value: 200,
         answer: 'What is an array',
-        question: 'The nanme of a group of hedgehogs?',
+        question: 'A group of hedgehogs.',
         hasBeenSelected: false,
     },
     {
@@ -91,7 +91,7 @@ const hedgeTheHog = [
     {
         value: 400,
         answer: 'What is snake venom',
-        question: 'What hedgehogs are largely immune to.',
+        question: 'The substance hedgehogs are largely immune to.',
         hasBeenSelected: false,
     },
     {
@@ -111,13 +111,13 @@ const heyFoxy = [
     {
         value: 200,
         answer: 'what is a vixen',
-        question: 'A female fox',
+        question: 'A female fox.',
         hasBeenSelected: false,
     },
     {
         value: 300,
         answer: 'What is a kit',
-        question: 'A baby fox',
+        question: 'A baby fox.',
         hasBeenSelected: false,
     },
     {
@@ -161,7 +161,7 @@ const getSquirrely = [
     {
         value: 500,
         answer: 'What is shadow tail',
-        question: 'The meaning of squirrel in Greek',
+        question: 'The meaning of squirrel in Greek.',
         hasBeenSelected: false,
     },
 ]
@@ -169,7 +169,7 @@ const itsGettingHarey = [
     {
         value: 100,
         answer: 'Who is Thumper',
-        question: "Bambi's best friend",
+        question: "Bambi's best friend.",
         hasBeenSelected: false,
     },
     {
@@ -193,7 +193,7 @@ const itsGettingHarey = [
     {
         value: 500,
         answer: 'What is a leveret',
-        question: 'A baby hare',
+        question: 'A baby hare.',
         hasBeenSelected: false,
     },
 ]
